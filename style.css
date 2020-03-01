@@ -1,0 +1,648 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two");
+@import url("https://fonts.googleapis.com/css?family=Roboto|Shadows+Into+Light+Two");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  -webkit-box-sizing: border-box;
+  /* Android ≤ 2.3, iOS ≤ 4 */
+  -moz-box-sizing: border-box;
+  /* Firefox ≤ 28 */
+  box-sizing: border-box;
+  /* Chrome, Firefox 29+, IE 8+, Opera, Safari 5.1 */
+}
+
+body {
+  line-height: 1;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='20px' height='785px' viewBox='0 0 20 785' enable-background='new 0 0 20 785' xml:space='preserve'%3E %3Crect x='7' fill='%23EDEDED' stroke='%23FFFFFF' stroke-miterlimit='10' width='8' height='792'/%3E %3C/svg%3E");
+}
+
+p {
+  text-align: center;
+  color: #30313D;
+  font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  text-align: center;
+  color: #30313D;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.4rem;
+}
+
+#intro {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+#intro #content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#intro #content #nombre {
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 3em;
+}
+#intro #content #logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0 3rem 0;
+}
+#intro #content #logo .yo {
+  width: 150px;
+  position: absolute;
+  z-index: 1;
+}
+#intro #content #logo .alaizq {
+  width: 150px;
+  padding-right: 1.8em;
+}
+#intro #content #logo .alader {
+  width: 150px;
+  padding-left: 1.8em;
+}
+#intro #content #logo #contenedorDatosGeneral {
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: -200;
+}
+#intro #content #logo #contenedorDatosGeneral #contenedorDatos {
+  border-radius: 50%;
+  background-color: #74C7A9;
+}
+#intro #content #social {
+  padding: 1rem 0 1rem 0;
+}
+#intro #content #social i {
+  color: #30313D;
+  padding-right: 5px;
+}
+#intro #content #ilus, #intro #content #anim, #intro #content #prog {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  opacity: 0;
+  font-size: 2em;
+}
+
+#flechaScroll {
+  margin-top: 1em;
+  opacity: 1;
+  -webkit-animation: mover_flecha 0.8s ease infinite;
+  -moz-animation: mover_flecha 0.8s ease infinite;
+  animation: mover_flecha 0.8s ease infinite;
+}
+
+@-webkit-keyframes mover_flecha {
+  0% {
+    transform: translateY(-3px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(-3px);
+  }
+}
+@-moz-keyframes mover_flecha {
+  0% {
+    transform: translateY(-3px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(-3px);
+  }
+}
+@keyframes mover_flecha {
+  0% {
+    transform: translateY(-3px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(-3px);
+  }
+}
+.main {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  z-index: 100;
+}
+
+@media only screen and (min-width: 300px) {
+  #logo {
+    margin: 0;
+  }
+
+  .main .contenedor-central {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .main .contenedor-central .fondo {
+    visibility: initial;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+  }
+  .main .contenedor-central .fondo img {
+    display: block;
+    margin: 0 auto;
+    height: 100%;
+    width: 300px;
+  }
+  .main .contenedor-central .ojos-cont {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+  }
+  .main .contenedor-central .ojos-cont .ojos {
+    visibility: initial;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 730px;
+    left: -48px;
+    z-index: 0;
+  }
+  .main .contenedor-central .ojos-cont .ojos .ojo1, .main .contenedor-central .ojos-cont .ojos .ojo2 {
+    height: 12px;
+    width: 7px;
+    background-color: white;
+    border-radius: 50%;
+  }
+  .main .contenedor-central .ojos-cont .ojos .ojo2 {
+    height: 14px;
+    width: 9px;
+  }
+  .main .contenedor-central .marikita-cont {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+  }
+  .main .contenedor-central .marikita-cont #marikita {
+    visibility: initial;
+    position: absolute;
+    top: 550px;
+    left: -25px;
+    z-index: 30;
+  }
+  .main .contenedor-central .marikita-cont #marikita img {
+    width: 50px;
+  }
+  .main .contenedor-central .bocadillos {
+    visibility: initial;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+  }
+  .main .contenedor-central .bocadillos .boc-ilus {
+    position: absolute;
+    top: 200px;
+    left: -170px;
+    width: 110px;
+  }
+  .main .contenedor-central .bocadillos .boc-anim {
+    position: absolute;
+    top: 170px;
+    left: -60px;
+    width: 110px;
+  }
+  .main .contenedor-central .bocadillos .boc-prog {
+    position: absolute;
+    top: 195px;
+    left: 50px;
+    width: 115px;
+  }
+  .main .contenedor-central .enlaces-ilustracion, .main .contenedor-central .enlaces-animacion {
+    margin: 0 auto;
+    position: absolute;
+    z-index: 1000;
+  }
+  .main .contenedor-central .enlaces-ilustracion .i-uno, .main .contenedor-central .enlaces-ilustracion .i-dos, .main .contenedor-central .enlaces-ilustracion .i-tres, .main .contenedor-central .enlaces-ilustracion .a-uno, .main .contenedor-central .enlaces-ilustracion .a-dos, .main .contenedor-central .enlaces-ilustracion .a-tres, .main .contenedor-central .enlaces-animacion .i-uno, .main .contenedor-central .enlaces-animacion .i-dos, .main .contenedor-central .enlaces-animacion .i-tres, .main .contenedor-central .enlaces-animacion .a-uno, .main .contenedor-central .enlaces-animacion .a-dos, .main .contenedor-central .enlaces-animacion .a-tres {
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #74C7A9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .main .contenedor-central .enlaces-ilustracion .i-uno img, .main .contenedor-central .enlaces-ilustracion .i-dos img, .main .contenedor-central .enlaces-ilustracion .i-tres img, .main .contenedor-central .enlaces-ilustracion .a-uno img, .main .contenedor-central .enlaces-ilustracion .a-dos img, .main .contenedor-central .enlaces-ilustracion .a-tres img, .main .contenedor-central .enlaces-animacion .i-uno img, .main .contenedor-central .enlaces-animacion .i-dos img, .main .contenedor-central .enlaces-animacion .i-tres img, .main .contenedor-central .enlaces-animacion .a-uno img, .main .contenedor-central .enlaces-animacion .a-dos img, .main .contenedor-central .enlaces-animacion .a-tres img {
+    width: 130%;
+  }
+  .main .contenedor-central .enlaces-ilustracion .i-uno, .main .contenedor-central .enlaces-animacion .i-uno {
+    top: 395px;
+    left: 27px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .i-dos, .main .contenedor-central .enlaces-animacion .i-dos {
+    top: 400px;
+    left: 85px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .i-tres, .main .contenedor-central .enlaces-animacion .i-tres {
+    top: 445px;
+    left: 115px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .a-uno, .main .contenedor-central .enlaces-animacion .a-uno {
+    top: 801px;
+    left: 7px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .a-dos, .main .contenedor-central .enlaces-animacion .a-dos {
+    top: 784px;
+    left: 60px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .a-tres, .main .contenedor-central .enlaces-animacion .a-tres {
+    top: 745px;
+    left: 106px;
+  }
+  .main .secciones {
+    display: block;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: -100;
+  }
+}
+@media only screen and (min-width: 400px) {
+  .main .contenedor-central .fondo img {
+    height: 100%;
+    width: 400px;
+  }
+  .main .contenedor-central .ojos-cont .ojos {
+    top: 970px;
+    left: -62px;
+  }
+  .main .contenedor-central .ojos-cont .ojos .ojo1, .main .contenedor-central .ojos-cont .ojos .ojo2 {
+    height: 13px;
+    width: 8px;
+  }
+  .main .contenedor-central .ojos-cont .ojos .ojo2 {
+    height: 15px;
+    width: 10px;
+  }
+  .main .contenedor-central .marikita-cont #marikita {
+    top: 700px;
+    left: -30px;
+  }
+  .main .contenedor-central .marikita-cont #marikita img {
+    width: 60px;
+  }
+  .main .contenedor-central .bocadillos .boc-ilus {
+    top: 270px;
+    left: -210px;
+    width: 130px;
+  }
+  .main .contenedor-central .bocadillos .boc-anim {
+    top: 230px;
+    left: -60px;
+    width: 130px;
+  }
+  .main .contenedor-central .bocadillos .boc-prog {
+    top: 275px;
+    left: 70px;
+    width: 140px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .i-uno, .main .contenedor-central .enlaces-ilustracion .i-dos, .main .contenedor-central .enlaces-ilustracion .i-tres, .main .contenedor-central .enlaces-ilustracion .a-uno, .main .contenedor-central .enlaces-ilustracion .a-dos, .main .contenedor-central .enlaces-ilustracion .a-tres, .main .contenedor-central .enlaces-animacion .i-uno, .main .contenedor-central .enlaces-animacion .i-dos, .main .contenedor-central .enlaces-animacion .i-tres, .main .contenedor-central .enlaces-animacion .a-uno, .main .contenedor-central .enlaces-animacion .a-dos, .main .contenedor-central .enlaces-animacion .a-tres {
+    height: 60px;
+    width: 60px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .i-uno, .main .contenedor-central .enlaces-animacion .i-uno {
+    top: 525px;
+    left: 40px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .i-dos, .main .contenedor-central .enlaces-animacion .i-dos {
+    top: 538px;
+    left: 115px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .i-tres, .main .contenedor-central .enlaces-animacion .i-tres {
+    top: 605px;
+    left: 155px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .a-uno, .main .contenedor-central .enlaces-animacion .a-uno {
+    top: 1067px;
+    left: 5px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .a-dos, .main .contenedor-central .enlaces-animacion .a-dos {
+    top: 1044px;
+    left: 75px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .a-tres, .main .contenedor-central .enlaces-animacion .a-tres {
+    top: 990px;
+    left: 136px;
+  }
+}
+@media only screen and (min-width: 500px) {
+  .main .contenedor-central .fondo img {
+    height: 100%;
+    width: 485px;
+  }
+  .main .contenedor-central .ojos-cont .ojos {
+    top: 1185px;
+    left: -77px;
+  }
+  .main .contenedor-central .ojos-cont .ojos .ojo1, .main .contenedor-central .ojos-cont .ojos .ojo2 {
+    height: 15px;
+    width: 10px;
+  }
+  .main .contenedor-central .ojos-cont .ojos .ojo2 {
+    height: 17px;
+    width: 12px;
+  }
+  .main .contenedor-central .marikita-cont #marikita {
+    top: 1080px;
+    left: -45px;
+  }
+  .main .contenedor-central .marikita-cont #marikita img {
+    width: 60px;
+  }
+  .main .contenedor-central .bocadillos .boc-ilus {
+    top: 350px;
+    left: -210px;
+    width: 130px;
+  }
+  .main .contenedor-central .bocadillos .boc-anim {
+    top: 310px;
+    left: -60px;
+    width: 130px;
+  }
+  .main .contenedor-central .bocadillos .boc-prog {
+    top: 355px;
+    left: 70px;
+    width: 140px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .i-uno, .main .contenedor-central .enlaces-ilustracion .i-dos, .main .contenedor-central .enlaces-ilustracion .i-tres, .main .contenedor-central .enlaces-ilustracion .a-uno, .main .contenedor-central .enlaces-ilustracion .a-dos, .main .contenedor-central .enlaces-ilustracion .a-tres, .main .contenedor-central .enlaces-animacion .i-uno, .main .contenedor-central .enlaces-animacion .i-dos, .main .contenedor-central .enlaces-animacion .i-tres, .main .contenedor-central .enlaces-animacion .a-uno, .main .contenedor-central .enlaces-animacion .a-dos, .main .contenedor-central .enlaces-animacion .a-tres {
+    height: 60px;
+    width: 60px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .i-uno, .main .contenedor-central .enlaces-animacion .i-uno {
+    top: 655px;
+    left: 50px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .i-dos, .main .contenedor-central .enlaces-animacion .i-dos {
+    top: 665px;
+    left: 140px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .i-tres, .main .contenedor-central .enlaces-animacion .i-tres {
+    top: 735px;
+    left: 185px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .a-uno, .main .contenedor-central .enlaces-animacion .a-uno {
+    top: 1291px;
+    left: 15px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .a-dos, .main .contenedor-central .enlaces-animacion .a-dos {
+    top: 1264px;
+    left: 95px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .a-tres, .main .contenedor-central .enlaces-animacion .a-tres {
+    top: 1200px;
+    left: 136px;
+  }
+  .main .secciones {
+    height: 200vh;
+    width: 100%;
+  }
+  .main .secciones .seccion {
+    height: 25%;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .main .contenedor-central .fondo img {
+    height: 100%;
+    width: 580px;
+  }
+  .main .contenedor-central .ojos-cont .ojos {
+    top: 1420px;
+    left: -90px;
+  }
+  .main .contenedor-central .ojos-cont .ojos .ojo1, .main .contenedor-central .ojos-cont .ojos .ojo2 {
+    height: 16px;
+    width: 11px;
+  }
+  .main .contenedor-central .ojos-cont .ojos .ojo2 {
+    height: 18px;
+    width: 13px;
+  }
+  .main .contenedor-central .marikita-cont #marikita {
+    top: 1220px;
+    left: -55px;
+  }
+  .main .contenedor-central .marikita-cont #marikita img {
+    width: 80px;
+  }
+  .main .contenedor-central .bocadillos .boc-ilus {
+    top: 400px;
+    left: -250px;
+    width: 170px;
+  }
+  .main .contenedor-central .bocadillos .boc-anim {
+    top: 360px;
+    left: -80px;
+    width: 160px;
+  }
+  .main .contenedor-central .bocadillos .boc-prog {
+    top: 405px;
+    left: 80px;
+    width: 175px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .i-uno, .main .contenedor-central .enlaces-ilustracion .i-dos, .main .contenedor-central .enlaces-ilustracion .i-tres, .main .contenedor-central .enlaces-ilustracion .a-uno, .main .contenedor-central .enlaces-ilustracion .a-dos, .main .contenedor-central .enlaces-ilustracion .a-tres, .main .contenedor-central .enlaces-animacion .i-uno, .main .contenedor-central .enlaces-animacion .i-dos, .main .contenedor-central .enlaces-animacion .i-tres, .main .contenedor-central .enlaces-animacion .a-uno, .main .contenedor-central .enlaces-animacion .a-dos, .main .contenedor-central .enlaces-animacion .a-tres {
+    height: 70px;
+    width: 70px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .i-uno, .main .contenedor-central .enlaces-animacion .i-uno {
+    top: 775px;
+    left: 70px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .i-dos, .main .contenedor-central .enlaces-animacion .i-dos {
+    top: 795px;
+    left: 170px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .i-tres, .main .contenedor-central .enlaces-animacion .i-tres {
+    top: 885px;
+    left: 222px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .a-uno, .main .contenedor-central .enlaces-animacion .a-uno {
+    top: 1541px;
+    left: 12px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .a-dos, .main .contenedor-central .enlaces-animacion .a-dos {
+    top: 1510px;
+    left: 112px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .a-tres, .main .contenedor-central .enlaces-animacion .a-tres {
+    top: 1448px;
+    left: 189px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .main .contenedor-central .fondo img {
+    width: 630px;
+  }
+  .main .contenedor-central .ojos-cont .ojos {
+    top: 1535px;
+    left: -97px;
+  }
+  .main .contenedor-central .ojos-cont .ojos .ojo1 {
+    margin-right: 3px;
+  }
+  .main .contenedor-central .ojos-cont .ojos .ojo2 {
+    height: 20px;
+    width: 13px;
+  }
+  .main .contenedor-central .marikita-cont #marikita {
+    top: 1290px;
+    left: -50px;
+  }
+  .main .contenedor-central .marikita-cont #marikita img {
+    width: 90px;
+  }
+  .main .contenedor-central .bocadillos .boc-ilus {
+    top: 435px;
+    left: -250px;
+    width: 155px;
+  }
+  .main .contenedor-central .bocadillos .boc-anim {
+    top: 398px;
+    left: -80px;
+    width: 160px;
+  }
+  .main .contenedor-central .bocadillos .boc-prog {
+    top: 440px;
+    left: 85px;
+    width: 175px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .i-uno, .main .contenedor-central .enlaces-ilustracion .i-dos, .main .contenedor-central .enlaces-ilustracion .i-tres, .main .contenedor-central .enlaces-ilustracion .a-uno, .main .contenedor-central .enlaces-ilustracion .a-dos, .main .contenedor-central .enlaces-ilustracion .a-tres, .main .contenedor-central .enlaces-animacion .i-uno, .main .contenedor-central .enlaces-animacion .i-dos, .main .contenedor-central .enlaces-animacion .i-tres, .main .contenedor-central .enlaces-animacion .a-uno, .main .contenedor-central .enlaces-animacion .a-dos, .main .contenedor-central .enlaces-animacion .a-tres {
+    height: 75px;
+    width: 75px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .i-uno, .main .contenedor-central .enlaces-animacion .i-uno {
+    top: 843px;
+    left: 75px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .i-dos, .main .contenedor-central .enlaces-animacion .i-dos {
+    top: 855px;
+    left: 180px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .i-tres, .main .contenedor-central .enlaces-animacion .i-tres {
+    top: 946px;
+    left: 240px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .a-uno, .main .contenedor-central .enlaces-animacion .a-uno {
+    top: 1678px;
+    left: 20px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .a-dos, .main .contenedor-central .enlaces-animacion .a-dos {
+    top: 1630px;
+    left: 112px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .a-tres, .main .contenedor-central .enlaces-animacion .a-tres {
+    top: 1570px;
+    left: 186px;
+  }
+  .main .secciones {
+    height: 240vh;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .main .espacio-izq {
+    width: 35%;
+  }
+  .main .contenedor-central {
+    width: 635px;
+  }
+  .main .contenedor-central .fondo img {
+    width: 635px;
+  }
+  .main .contenedor-central .ojos-cont .ojos {
+    top: 1545px;
+    left: -95px;
+  }
+  .main .contenedor-central .ojos-cont .ojos .ojo1, .main .contenedor-central .ojos-cont .ojos .ojo2 {
+    height: 16px;
+    width: 11px;
+  }
+  .main .contenedor-central .ojos-cont .ojos .ojo2 {
+    height: 20px;
+    width: 13px;
+  }
+  .main .contenedor-central .marikita-cont #marikita {
+    top: 1290px;
+    left: -50px;
+    width: 80px;
+  }
+  .main .contenedor-central .marikita-cont #marikita img {
+    width: 100%;
+  }
+  .main .contenedor-central .bocadillos .boc-ilus {
+    left: -235px;
+  }
+  .main .contenedor-central .bocadillos .boc-anim {
+    left: -85px;
+  }
+  .main .contenedor-central .bocadillos .boc-prog {
+    left: 70px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .i-uno, .main .contenedor-central .enlaces-ilustracion .i-dos, .main .contenedor-central .enlaces-ilustracion .i-tres, .main .contenedor-central .enlaces-ilustracion .a-uno, .main .contenedor-central .enlaces-ilustracion .a-dos, .main .contenedor-central .enlaces-ilustracion .a-tres, .main .contenedor-central .enlaces-animacion .i-uno, .main .contenedor-central .enlaces-animacion .i-dos, .main .contenedor-central .enlaces-animacion .i-tres, .main .contenedor-central .enlaces-animacion .a-uno, .main .contenedor-central .enlaces-animacion .a-dos, .main .contenedor-central .enlaces-animacion .a-tres {
+    height: 77px;
+    width: 77px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .i-uno, .main .contenedor-central .enlaces-animacion .i-uno {
+    top: 851px;
+    left: 81px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .i-dos, .main .contenedor-central .enlaces-animacion .i-dos {
+    top: 873px;
+    left: 188px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .i-tres, .main .contenedor-central .enlaces-animacion .i-tres {
+    top: 958px;
+    left: 247px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .a-uno, .main .contenedor-central .enlaces-animacion .a-uno {
+    top: 1685px;
+    left: 12px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .a-dos, .main .contenedor-central .enlaces-animacion .a-dos {
+    top: 1645px;
+    left: 118px;
+  }
+  .main .contenedor-central .enlaces-ilustracion .a-tres, .main .contenedor-central .enlaces-animacion .a-tres {
+    top: 1586px;
+    left: 205px;
+  }
+}
