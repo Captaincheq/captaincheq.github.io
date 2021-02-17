@@ -518,3 +518,123 @@ h3 {
   visibility: visible;
   transform: translateY(0);
 }
+
+
+/*------------------------------------------------------------------
+    index.html
+-------------------------------------------------------------------*/
+
+body
+{
+background: url("") black;
+background-size: cover;
+}
+
+.clockcontainer
+{
+position: absolute;
+bottom: 2%;
+left: 2%;
+}
+
+.clock
+  {
+color:snow;
+font-family: monospace;
+       font-size: 30px;
+}
+
+.weathercontainer
+{
+position: absolute;
+top: 2%;
+left: 2%;
+width: 650px;
+}
+.switch
+{
+position: absolute;
+right: 2%;
+bottom: 2%;
+font-family: impact;
+}
+a
+{
+position: relative;
+display: inline-block;
+  padding: 15px 30px;
+  color: snow;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 26px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+a:hover
+  {
+      color:crimson;
+      box-shadow: 0 0 10px firebrick, 0 0 40px firebrick, 0 0 80px firebrick;
+      transition-delay: 1s;
+  }
+
+a span
+{
+  position: absolute;
+    display: block;
+}
+a span:nth-child(1)
+  {
+      top: 0;
+      left: -100%;
+      height: 2px;
+      width: 100%;
+      background: linear-gradient(90deg, transparent,red);
+  }
+  a:hover span:nth-child(1)
+    {
+      left: 100%;
+      transition: 1s;
+    }
+a span:nth-child(2)
+  {
+    top: -100%;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(180deg, transparent,red);
+  }
+  a:hover span:nth-child(2)
+    {
+      top: 100%;
+      transition: 1s;
+      transition-delay: 0.25s;
+    }
+a span:nth-child(3)
+  {
+      right: -100%;
+      bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(270deg, transparent,red);
+  }
+  a:hover span:nth-child(3)
+    {
+      right: 100%;
+      transition: 1s;
+      transition-delay: 0.5s;
+    }
+a span:nth-child(4)
+  {
+    bottom: -100%;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(360deg, transparent,red);
+  }
+  a:hover span:nth-child(4)
+    {
+        bottom: 100%;
+        transition: 1s;
+      transition-delay: 0.75s;
+    }
