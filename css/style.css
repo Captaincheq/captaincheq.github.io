@@ -575,7 +575,7 @@ button:focus{
 
 
 /*------------------------------------------------------------------
-    Family - The Boys
+    Family - REFERENCES
 -------------------------------------------------------------------*/
 
 .family-box{
@@ -608,11 +608,13 @@ button:focus{
 .family-info{
 	padding: 25px 30px;
 	background: #1e29c7;
+	text-align: center;
 }
 .family-info h4{
 	font-family: 'Marck Script', cursive;
 	font-size: 24px;
 }
+
 .family-info p{
 	margin: 0px;
 	font-size: 18px;
