@@ -370,7 +370,7 @@ button:focus{
 }
 
 .lbox-caption {
-    position: absolute;
+    position: center;
     margin: 0 auto;
     left: 0;
     right: 0;
@@ -386,7 +386,7 @@ button:focus{
 
 .lbox-details::before{
 	content: "";
-	background: rgba(0,0,0,0.5);
+	background: rgba(36, 35, 35, 0.5);
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -632,7 +632,7 @@ button:focus{
 .gallery-box ul{}
 .gallery-box ul li{
 	position: relative;
-	width: 25%;
+	width: 20%;
 	margin: 0;
 	padding: 0;
 	float: left;
