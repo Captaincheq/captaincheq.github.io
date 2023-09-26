@@ -284,7 +284,7 @@ button:focus{
 -------------------------------------------------------------------*/
 
 .top-header .navbar{
-	background-color: rgb(56, 56, 247);
+	background-color: rgb(8, 8, 32);
 	padding: 15px 0px;
 }
 
@@ -296,7 +296,7 @@ button:focus{
 }
 
 .top-header .navbar .navbar-collapse ul li a.active{
-	background: #0e0581;
+	background: #0e0971;
 	color: #ffffff;
 }
 
@@ -316,7 +316,7 @@ button:focus{
 	animation-fill-mode: both;
 	-webkit-animation-name: fadeInDown;
 	animation-name: fadeInDown;
-	background: #fff;
+	background: #cdcdcd;
 	z-index: 20;
 }
 
