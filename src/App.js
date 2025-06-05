@@ -26,7 +26,7 @@ function MainPage() {
 
 function App() {
   return (
-    <Router basename="/captaincheq">
+    <Router basename="/captaincheqcheq">
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/cv" element={<CV />} />
