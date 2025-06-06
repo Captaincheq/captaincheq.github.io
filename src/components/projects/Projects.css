@@ -1,0 +1,186 @@
+/* ===== ROOT VARIABLES (support light/dark themes) ===== */
+:root {
+  --bg-light: #f4f4f4;
+  --bg-dark: #1a202c;
+  --text-light: #2d3748;
+  --text-dark: #f7fafc;
+  --accent: linear-gradient(90deg, #667eea, #764ba2);
+  --border: rgba(255, 255, 255, 0.2);
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* ===== BASE RESET & SMOOTH SCROLL ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* ===== SECTION WRAPPER ===== */
+.project-box {
+  padding: 50px 0;
+  background: var(--bg-dark);
+  position: relative;
+  min-height: 100vh;
+}
+
+.project-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,<svg ...>") no-repeat;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.project-a1 {
+  position: relative;
+   padding: 0 10px;
+  z-index: 2;
+}
+
+/* ===== TITLE ===== */
+.project-title-box {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.project-title-box h2 {
+  font-size: 3.2rem;
+  margin-bottom: 20px;
+  color: white;
+  position: relative;
+}
+
+.project-title-box h2 u {
+  text-decoration: none;
+  position: relative;
+}
+
+.project-title-box h2 u::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1);
+  bottom: -8px;
+  left: 0;
+  border-radius: 2px;
+}
+
+.project-title-box p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ===== PROJECT GRID WRAPPER ===== */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  padding-bottom: 50px;
+  
+}
+
+/* ===== SINGLE PROJECT CARD ===== */
+.project {
+  all: unset;       /* remove all default link styles */
+  cursor: default;  /* cursor normal, not pointer */
+  text-decoration: none;
+  color: inherit;   /* inherit color from parent */
+  display: block;   /* so the whole project div is clickable */
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 20px 40px var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+.project h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: var(--text-light);
+  position: relative;
+  
+}
+
+.project h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: var(--accent);
+}
+
+/* ===== IMAGE STYLES ===== */
+.project-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin: 15px 0;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.project:hover .project-img {
+  transform: scale(1.02);
+}
+
+/* ===== ANIMATION ON SCROLL ===== */
+.project[data-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.project[data-animate].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (max-width: 768px) {
+  .title-box h2 {
+    font-size: 2.4rem;
+  }
+  .project h2 {
+    font-size: 1.4rem;
+  }
+  .project-img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-box h2 {
+    font-size: 2rem;
+  }
+  .project {
+    padding: 20px;
+  }
+  .project-img {
+    height: 150px;
+  }
+}

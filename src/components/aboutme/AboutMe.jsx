@@ -12,7 +12,7 @@ export default function AboutMe() {
           <h4>Hobbies</h4>
           <ul>
             <li>Chess</li>
-            <li>Computer programming.</li>
+            <li>Computer programming</li>
             <li>Meditation</li>
             <li>Gaming</li>
             <li>Eating</li>
