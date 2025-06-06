@@ -11,7 +11,7 @@ import Procurement from './components/projects/procurement/Procurement';
 import './App.css';
 
 function MainPage() {
-  // This is your existing homepage with sections
+  // main homepage sections
   return (
     <>
       <Header />
